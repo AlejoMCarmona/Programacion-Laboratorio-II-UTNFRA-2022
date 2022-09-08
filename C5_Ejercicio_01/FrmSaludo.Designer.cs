@@ -57,7 +57,7 @@ namespace C5_Ejercicio_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 121);
+            this.ClientSize = new System.Drawing.Size(491, 129);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

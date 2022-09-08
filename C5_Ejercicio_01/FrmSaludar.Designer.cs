@@ -34,6 +34,8 @@ namespace C5_Ejercicio_01
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.btnSaludar = new System.Windows.Forms.Button();
+            this.lblMateria = new System.Windows.Forms.Label();
+            this.cmbMaterias = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -64,7 +66,7 @@ namespace C5_Ejercicio_01
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblApellido.Location = new System.Drawing.Point(273, 18);
+            this.lblApellido.Location = new System.Drawing.Point(210, 18);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(52, 15);
             this.lblApellido.TabIndex = 3;
@@ -72,7 +74,7 @@ namespace C5_Ejercicio_01
             // 
             // btnSaludar
             // 
-            this.btnSaludar.Location = new System.Drawing.Point(210, 77);
+            this.btnSaludar.Location = new System.Drawing.Point(210, 129);
             this.btnSaludar.Name = "btnSaludar";
             this.btnSaludar.Size = new System.Drawing.Size(115, 23);
             this.btnSaludar.TabIndex = 6;
@@ -80,11 +82,43 @@ namespace C5_Ejercicio_01
             this.btnSaludar.UseVisualStyleBackColor = true;
             this.btnSaludar.Click += new System.EventHandler(this.btnSaludar_Click);
             // 
+            // lblMateria
+            // 
+            this.lblMateria.AutoSize = true;
+            this.lblMateria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMateria.Location = new System.Drawing.Point(14, 71);
+            this.lblMateria.Name = "lblMateria";
+            this.lblMateria.Size = new System.Drawing.Size(97, 15);
+            this.lblMateria.TabIndex = 8;
+            this.lblMateria.Text = "Materia favorita";
+            // 
+            // cmbMaterias
+            // 
+            this.cmbMaterias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaterias.FormattingEnabled = true;
+            this.cmbMaterias.Items.AddRange(new object[] {
+            "Matemática",
+            "Inglés I",
+            "Programación I",
+            "Laboratorio I",
+            "SPD",
+            "Metodología de la Investigación",
+            "Inglés II",
+            "Programación II",
+            "Laboratorio II",
+            "Arquitectura y SO"});
+            this.cmbMaterias.Location = new System.Drawing.Point(14, 89);
+            this.cmbMaterias.Name = "cmbMaterias";
+            this.cmbMaterias.Size = new System.Drawing.Size(311, 23);
+            this.cmbMaterias.TabIndex = 9;
+            // 
             // FrmSaludar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 121);
+            this.ClientSize = new System.Drawing.Size(348, 164);
+            this.Controls.Add(this.cmbMaterias);
+            this.Controls.Add(this.lblMateria);
             this.Controls.Add(this.btnSaludar);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
@@ -108,6 +142,8 @@ namespace C5_Ejercicio_01
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Button btnSaludar;
+        private System.Windows.Forms.Label lblMateria;
+        private System.Windows.Forms.ComboBox cmbMaterias;
     }
 }
 
