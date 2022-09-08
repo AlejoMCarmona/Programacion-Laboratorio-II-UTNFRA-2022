@@ -17,7 +17,7 @@ namespace C5_Ejercicio_01
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSalu());
+            Application.Run(new FrmSaludar());
         }
     }
 }

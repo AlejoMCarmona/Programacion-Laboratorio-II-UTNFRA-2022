@@ -1,15 +1,15 @@
 ﻿
 namespace C5_Ejercicio_01
 {
-    partial class FrmSalu
+    partial class FrmSaludo
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -24,74 +24,48 @@ namespace C5_Ejercicio_01
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.btnSaludar = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtNombre
+            // lblTitulo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(14, 55);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
-            this.txtNombre.TabIndex = 0;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(19, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(225, 23);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "¡Hola, Windows Forms!";
             // 
-            // txtApellido
+            // lblMensaje
             // 
-            this.txtApellido.Location = new System.Drawing.Point(158, 55);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(100, 23);
-            this.txtApellido.TabIndex = 1;
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMensaje.Location = new System.Drawing.Point(19, 67);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(13, 20);
+            this.lblMensaje.TabIndex = 1;
+            this.lblMensaje.Text = ".";
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre.Location = new System.Drawing.Point(14, 27);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(53, 15);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblApellido.Location = new System.Drawing.Point(158, 27);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(52, 15);
-            this.lblApellido.TabIndex = 3;
-            this.lblApellido.Text = "Apellido";
-            // 
-            // btnSaludar
-            // 
-            this.btnSaludar.Location = new System.Drawing.Point(158, 93);
-            this.btnSaludar.Name = "btnSaludar";
-            this.btnSaludar.Size = new System.Drawing.Size(100, 23);
-            this.btnSaludar.TabIndex = 6;
-            this.btnSaludar.Text = "Saludar";
-            this.btnSaludar.UseVisualStyleBackColor = true;
-            this.btnSaludar.Click += new System.EventHandler(this.btnSaludar_Click);
-            // 
-            // FrmSalu
+            // FrmSaludo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 137);
-            this.Controls.Add(this.btnSaludar);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
-            this.Name = "FrmSalu";
-            this.Text = "¡Hola, Windows Forms!";
+            this.ClientSize = new System.Drawing.Size(382, 121);
+            this.Controls.Add(this.lblMensaje);
+            this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmSaludo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmSaludo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,11 +73,7 @@ namespace C5_Ejercicio_01
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Button btnSaludar;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }
-
