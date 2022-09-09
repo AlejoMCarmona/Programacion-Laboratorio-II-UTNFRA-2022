@@ -96,17 +96,6 @@ namespace C5_Ejercicio_01
             // 
             this.cmbMaterias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaterias.FormattingEnabled = true;
-            this.cmbMaterias.Items.AddRange(new object[] {
-            "Matemática",
-            "Inglés I",
-            "Programación I",
-            "Laboratorio I",
-            "SPD",
-            "Metodología de la Investigación",
-            "Inglés II",
-            "Programación II",
-            "Laboratorio II",
-            "Arquitectura y SO"});
             this.cmbMaterias.Location = new System.Drawing.Point(14, 89);
             this.cmbMaterias.Name = "cmbMaterias";
             this.cmbMaterias.Size = new System.Drawing.Size(311, 23);
@@ -130,6 +119,7 @@ namespace C5_Ejercicio_01
             this.Name = "FrmSaludar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "¡Hola, Windows Forms!";
+            this.Load += new System.EventHandler(this.FrmSaludar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

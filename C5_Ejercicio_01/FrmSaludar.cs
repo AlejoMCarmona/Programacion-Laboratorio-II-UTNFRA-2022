@@ -15,12 +15,6 @@ namespace C5_Ejercicio_01
         public FrmSaludar()
         {
             InitializeComponent();
-            this.cmbMaterias.Text = "Matemática";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSaludar_Click(object sender, EventArgs e)
@@ -51,6 +45,13 @@ namespace C5_Ejercicio_01
                 FrmSaludo frmSaludo = new FrmSaludo("Saludo", mensaje.ToString());
                 frmSaludo.ShowDialog(); //de forma modal
             }
+        }
+
+        private void FrmSaludar_Load(object sender, EventArgs e)
+        {
+            string[] materias = {"Matemática", "Inglés I", "SPD", "Programación I", "Laboratorio I", "Probabilidad", "Inglés II", "Programación II", "Laboratorio II", "Arquitectura y SO", "Metolodogía de la Investigación" };
+            this.cmbMaterias.Items.AddRange(materias);
+            this.cmbMaterias.Text = "Matemática";
         }
     }
 }
