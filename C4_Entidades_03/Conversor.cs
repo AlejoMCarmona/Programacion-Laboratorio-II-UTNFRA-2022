@@ -8,8 +8,6 @@ namespace C4_Entidades_03
 {
     public static class Conversor
     {
-        //Pregunta 1: tuve que cambiar el tipo de dato del ejercicio 1, porque necesitaba un rango mayor de números.
-        //Pregunta 2: ¿se aceptaban binarios con punto flotante?
         public static string ConvertirDecimalABinario(double numero)
         {
             string resultado = "";
