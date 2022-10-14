@@ -8,9 +8,12 @@ namespace C9_EntidadesCentralita_03
 {
     public class Centralita
     {
+        #region Atributos
         private List<Llamada> listaDeLlamadas;
         private string razonSocial;
+        #endregion
 
+        #region Constructores
         public Centralita()
         {
             listaDeLlamadas = new List<Llamada>();
@@ -20,7 +23,9 @@ namespace C9_EntidadesCentralita_03
         {
             this.razonSocial = nombreEmpresa;
         }
+        #endregion
 
+        #region Propiedades
         public float GananciasPorLocal
         {
             get { return CalcularGanancia(eTipoLlamada.Local); }
@@ -39,7 +44,9 @@ namespace C9_EntidadesCentralita_03
         {
             get { return this.listaDeLlamadas; }
         }
+        #endregion
 
+        #region Métodos
         private float CalcularGanancia(eTipoLlamada tipo)
         {
             float ganancia = 0;
@@ -51,17 +58,17 @@ namespace C9_EntidadesCentralita_03
 
                 if (tipoLlamadaActual == eTipoLlamada.Local.ToString() && (tipo == eTipoLlamada.Todas || tipo == eTipoLlamada.Local))
                 {
-                    ganancia += ((Local)llamada).CostoLlamada * llamada.Duracion;
+                    ganancia += ((Local)llamada).CostoLlamada;
                 } else if (tipoLlamadaActual == eTipoLlamada.Provincial.ToString() && (tipo == eTipoLlamada.Todas || tipo == eTipoLlamada.Provincial))
                 {
-                    ganancia += ((Provincial)llamada).CostoLlamada * llamada.Duracion;
+                    ganancia += ((Provincial)llamada).CostoLlamada;
                 }
             }
 
             return ganancia;
         }
 
-        public string Mostrar()
+        private string Mostrar()
         {
             StringBuilder datosCentralita = new StringBuilder();
 
@@ -70,7 +77,8 @@ namespace C9_EntidadesCentralita_03
             datosCentralita.AppendLine("********Llamadas********");
             foreach (Llamada llamada in this.listaDeLlamadas)
             {
-                datosCentralita.Append(llamada.Mostrar());
+                datosCentralita.Append(llamada.ToString());
+                datosCentralita.AppendLine("---------------------");
             }
             datosCentralita.AppendLine("************************");
             datosCentralita.AppendLine("Ganancia por total: " + this.GananciasPorTotal);
@@ -86,5 +94,53 @@ namespace C9_EntidadesCentralita_03
             this.listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
 
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
+        private void AgregarLlamada (Llamada nuevaLlamada)
+        {
+            if (nuevaLlamada is not null)
+            {
+                this.listaDeLlamadas.Add(nuevaLlamada);
+            }
+        }
+
+        public static bool operator ==(Centralita c, Llamada l)
+        {
+            bool retorno = false;
+
+            foreach (Llamada llamada in c.listaDeLlamadas)
+            {
+                if (llamada == l)
+                {
+                    retorno = true;
+                    break;
+                }
+            }
+
+            return retorno;
+        }
+
+        public static bool operator !=(Centralita c, Llamada l)
+        {
+            return !(c == l);
+        }
+
+        public static bool operator +(Centralita c, Llamada l)
+        {
+            bool retorno = false;
+
+            if (c is not null && l is not null && c != l)
+            {
+                retorno = true;
+                c.AgregarLlamada(l);
+            }
+
+            return retorno;
+        }
+
+        #endregion
     }
 }

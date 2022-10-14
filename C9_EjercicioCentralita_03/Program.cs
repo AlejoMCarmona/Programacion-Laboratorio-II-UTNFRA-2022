@@ -7,6 +7,8 @@ namespace C9_EjercicioCentralita_03
     {
         static void Main(string[] args)
         {
+            bool retorno;
+
             // Mi central
             Centralita c = new Centralita("Fede Center");
 
@@ -17,18 +19,16 @@ namespace C9_EjercicioCentralita_03
             Provincial l4 = new Provincial(eFranja.Franja_3, l2);
 
             // Las llamadas se irán registrando en la Centralita.
-            // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
-            c.Llamadas.Add(l1);
-            Console.WriteLine(c.Mostrar());
-            c.Llamadas.Add(l2);
-            Console.WriteLine(c.Mostrar());
-            c.Llamadas.Add(l3);
-            Console.WriteLine(c.Mostrar());
-            c.Llamadas.Add(l4);
-            Console.WriteLine(c.Mostrar());
+            retorno = c + l1;
+            retorno = c + l2;
+            retorno = c + l3;
+            retorno = c + l4; // No se agregará porque l2 == l4 y l2 está en centralita
 
+            // Ordeno todas las llamadas por duración
             c.OrdenarLlamadas();
-            Console.WriteLine(c.Mostrar());
+
+            // Muestro los datos de la centralita
+            Console.WriteLine(c.ToString());
 
             Console.ReadKey();
         }

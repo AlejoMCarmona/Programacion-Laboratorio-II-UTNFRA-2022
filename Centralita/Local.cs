@@ -28,7 +28,7 @@ namespace Centralita
             StringBuilder datosLocal = new StringBuilder();
 
             datosLocal.Append(base.Mostrar());
-            datosLocal.AppendLine("Costo: " + this.costo);
+            datosLocal.AppendLine("Costo: " + this.CostoLlamada);
 
             return datosLocal.ToString();
         }

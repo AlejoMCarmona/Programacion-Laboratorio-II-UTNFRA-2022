@@ -8,8 +8,11 @@ namespace C9_EntidadesCentralita_03
 {
     public class Provincial : Llamada
     {
+        #region Atributos
         private eFranja franjaHoraria;
+        #endregion
 
+        #region Constructores
         public Provincial(eFranja miFranja, float duracion, string destino, string origen) : base(duracion, destino, origen)
         {
             this.franjaHoraria = miFranja;
@@ -17,13 +20,17 @@ namespace C9_EntidadesCentralita_03
 
         public Provincial(eFranja miFranja, Llamada llamada) : this(miFranja, llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
         { }
+        #endregion
 
-        public float CostoLlamada
+        #region Propiedades
+        public override float CostoLlamada
         {
             get { return CalcularCosto(); }
         }
+        #endregion
 
-        public string Mostrar()
+        #region Métodos, Sobrescrituras
+        protected override string Mostrar()
         {
             StringBuilder datosLocal = new StringBuilder();
 
@@ -53,5 +60,15 @@ namespace C9_EntidadesCentralita_03
 
             return this.duracion * costoPorSegundo;
         }
+        public override bool Equals(object obj)
+        {
+            return String.Equals(obj.GetType().Name.ToString(), eTipoLlamada.Provincial.ToString());
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+        #endregion
     }
 }

@@ -8,8 +8,11 @@ namespace C9_EntidadesCentralita_03
 {
     public class Local : Llamada
     {
+        #region Atributos
         private float costo;
+        #endregion
 
+        #region Constructores
         public Local(float duracion, string destino, string origen, float costo) : base (duracion, destino, origen)
         {
             this.costo = costo;
@@ -17,18 +20,22 @@ namespace C9_EntidadesCentralita_03
 
         public Local(Llamada llamada, float costo) : this(llamada.Duracion, llamada.NroDestino, llamada.NroOrigen, costo) 
         { }
+        #endregion
 
-        public float CostoLlamada
+        #region Propiedades
+        public override float CostoLlamada
         {
             get { return CalcularCosto(); }
         }
+        #endregion
 
-        public string Mostrar()
+        #region Métodos, Sobrescrituras
+        protected override string Mostrar()
         {
             StringBuilder datosLocal = new StringBuilder();
 
             datosLocal.Append(base.Mostrar());
-            datosLocal.AppendLine("Costo: " + this.costo);
+            datosLocal.AppendLine("Costo: " + this.CostoLlamada);
 
             return datosLocal.ToString();
         }
@@ -37,5 +44,16 @@ namespace C9_EntidadesCentralita_03
         {
             return this.costo * this.duracion;
         }
+
+        public override bool Equals(object obj)
+        {
+            return String.Equals(obj.GetType().Name.ToString(), eTipoLlamada.Local.ToString());
+        }
+
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+        #endregion
     }
 }

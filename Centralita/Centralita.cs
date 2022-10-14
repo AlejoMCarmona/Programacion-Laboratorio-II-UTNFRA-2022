@@ -51,10 +51,10 @@ namespace Centralita
 
                 if (tipoLlamadaActual == eTipoLlamada.Local.ToString() && (tipo == eTipoLlamada.Todas || tipo == eTipoLlamada.Local))
                 {
-                    ganancia += ((Local)llamada).CostoLlamada * llamada.Duracion;
+                    ganancia += ((Local)llamada).CostoLlamada;
                 } else if (tipoLlamadaActual == eTipoLlamada.Provincial.ToString() && (tipo == eTipoLlamada.Todas || tipo == eTipoLlamada.Provincial))
                 {
-                    ganancia += ((Provincial)llamada).CostoLlamada * llamada.Duracion;
+                    ganancia += ((Provincial)llamada).CostoLlamada;
                 }
             }
 

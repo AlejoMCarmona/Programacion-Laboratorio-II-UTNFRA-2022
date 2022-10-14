@@ -3,19 +3,24 @@ using System.Text;
 
 namespace C9_EntidadesCentralita_03
 {
-    public class Llamada
+    public abstract class Llamada
     {
+        #region Atributos
         protected float duracion;
         protected string nroDestino;
         protected string nroOrigen;
+        #endregion
 
+        #region Constructores
         public Llamada(float duracion, string nroDestino, string nroOrigen)
         {
             this.duracion = duracion;
             this.nroDestino = nroDestino;
             this.nroOrigen = nroOrigen;
         }
+        #endregion
 
+        #region Propiedades
         public float Duracion
         {
             get { return this.duracion; }
@@ -31,6 +36,13 @@ namespace C9_EntidadesCentralita_03
             get { return this.nroOrigen; }
         }
 
+        public abstract float CostoLlamada
+        {
+            get;
+        }
+        #endregion
+
+        #region Métodos/Sobrecargas
         public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
         {
             int retorno = 0;
@@ -46,7 +58,7 @@ namespace C9_EntidadesCentralita_03
             return retorno;
         }
 
-        public string Mostrar()
+        protected virtual string Mostrar()
         {
             StringBuilder datosLlamada = new StringBuilder();
 
@@ -57,6 +69,22 @@ namespace C9_EntidadesCentralita_03
             return datosLlamada.ToString();
         }
 
+        public static bool operator ==(Llamada l1, Llamada l2)
+        {
+            bool retorno = false;
 
+            if (l1.Equals(l2) && l1.nroDestino == l2.nroDestino && l1.nroOrigen == l2.nroOrigen)
+            {
+                retorno = true;
+            }
+
+            return retorno;
+        }
+
+        public static bool operator !=(Llamada l1, Llamada l2)
+        {
+            return !(l1 == l2);
+        }
+        #endregion
     }
 }
