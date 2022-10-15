@@ -265,19 +265,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C8_Ejercicio_04", "C8_Ejerc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ejercicio 3", "Ejercicio 3", "{C09BA7A5-5BEB-4BCD-9C1C-CC21F51E9064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C9_EjercicioCentralita_03", "C9_EjercicioCentralita_03\C9_EjercicioCentralita_03.csproj", "{9590B7C7-2718-4F28-894D-A74E5B99B596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C9_EjercicioCentralita_03", "C9_EjercicioCentralita_03\C9_EjercicioCentralita_03.csproj", "{9590B7C7-2718-4F28-894D-A74E5B99B596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C9_EntidadesCentralita_03", "C9_EntidadesCentralita_03\C9_EntidadesCentralita_03.csproj", "{33FFD643-6E17-4DBD-B3C7-4F1BD6650DA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C9_EntidadesCentralita_03", "C9_EntidadesCentralita_03\C9_EntidadesCentralita_03.csproj", "{33FFD643-6E17-4DBD-B3C7-4F1BD6650DA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmCentralita", "FrmCentralita\FrmCentralita.csproj", "{D1E9DDA4-52BA-4B11-916C-F7D4D8890694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrmCentralita", "FrmCentralita\FrmCentralita.csproj", "{D1E9DDA4-52BA-4B11-916C-F7D4D8890694}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ejercicio 03", "Ejercicio 03", "{09B1F375-7699-4D94-AF11-44A3641DBFC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C10_FormsCentralita_03", "C10_CentralitaForms_03\C10_FormsCentralita_03.csproj", "{F6CA5675-5925-4894-B944-7C1FCB853A4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C10_FormsCentralita_03", "C10_CentralitaForms_03\C10_FormsCentralita_03.csproj", "{F6CA5675-5925-4894-B944-7C1FCB853A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C10_EntidadesCentralita_03", "C10_EntidadesCentralita_03\C10_EntidadesCentralita_03.csproj", "{53D1F552-C280-4616-8367-458A3B7FA30F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C10_EntidadesCentralita_03", "C10_EntidadesCentralita_03\C10_EntidadesCentralita_03.csproj", "{53D1F552-C280-4616-8367-458A3B7FA30F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C10_EjerciciosCentralita_03", "C10_EjerciciosCentralita_03\C10_EjerciciosCentralita_03.csproj", "{BFCF677C-1826-4385-B478-AF726F37B1C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C10_EjerciciosCentralita_03", "C10_EjerciciosCentralita_03\C10_EjerciciosCentralita_03.csproj", "{BFCF677C-1826-4385-B478-AF726F37B1C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clase 11", "Clase 11", "{3CAE100F-CF77-4F05-A284-14DEC7937B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C11_Ejercicio_01", "C11_Ejercicio_01\C11_Ejercicio_01.csproj", "{0FF4B669-0A93-4305-9E64-C7AC39F17871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C11_Entidades_01", "C11_Entidades_01\C11_Entidades_01.csproj", "{53010361-6451-475D-BC3F-8E506C7320E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -637,6 +643,14 @@ Global
 		{BFCF677C-1826-4385-B478-AF726F37B1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFCF677C-1826-4385-B478-AF726F37B1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFCF677C-1826-4385-B478-AF726F37B1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF4B669-0A93-4305-9E64-C7AC39F17871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF4B669-0A93-4305-9E64-C7AC39F17871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF4B669-0A93-4305-9E64-C7AC39F17871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF4B669-0A93-4305-9E64-C7AC39F17871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53010361-6451-475D-BC3F-8E506C7320E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53010361-6451-475D-BC3F-8E506C7320E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53010361-6451-475D-BC3F-8E506C7320E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53010361-6451-475D-BC3F-8E506C7320E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -766,6 +780,8 @@ Global
 		{F6CA5675-5925-4894-B944-7C1FCB853A4D} = {09B1F375-7699-4D94-AF11-44A3641DBFC3}
 		{53D1F552-C280-4616-8367-458A3B7FA30F} = {09B1F375-7699-4D94-AF11-44A3641DBFC3}
 		{BFCF677C-1826-4385-B478-AF726F37B1C6} = {09B1F375-7699-4D94-AF11-44A3641DBFC3}
+		{0FF4B669-0A93-4305-9E64-C7AC39F17871} = {3CAE100F-CF77-4F05-A284-14DEC7937B58}
+		{53010361-6451-475D-BC3F-8E506C7320E3} = {3CAE100F-CF77-4F05-A284-14DEC7937B58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30AA4DBB-BE28-458A-845D-1629E1D15414}
