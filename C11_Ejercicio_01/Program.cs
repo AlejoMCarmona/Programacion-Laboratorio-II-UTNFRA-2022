@@ -35,10 +35,22 @@ namespace C11_Ejercicio_01
                 resultado = Calculadora.Add("1,6,");
                 Console.WriteLine($"Resultado: {resultado}");
 
-                resultado = Calculadora.Add("1,6, "); //excepción
+                resultado = Calculadora.Add("1,6, "); //excepción en parte dos
                 Console.WriteLine($"Resultado: {resultado}");
 
-                resultado = Calculadora.Add("1, hola"); //excepción
+                resultado = Calculadora.Add("  1,  6,   "); //excepción en parte dos
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("  1,  6,   "); //excepción en parte dos
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1 \n2,3");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1 \n2");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1, \n"); //excepcion
                 Console.WriteLine($"Resultado: {resultado}");
             }
             catch (FormatException ex)
