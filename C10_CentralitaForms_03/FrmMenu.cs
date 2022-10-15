@@ -1,4 +1,4 @@
-﻿using C9_EntidadesCentralita_03;
+﻿using C10_EntidadesCentralita_03;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmCentralita
+namespace C10_CentralitaForms_03
 {
     public partial class FrmMenu : Form
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace FrmCentralita
+namespace C10_CentralitaForms_03
 {
     partial class FrmMenu
     {
