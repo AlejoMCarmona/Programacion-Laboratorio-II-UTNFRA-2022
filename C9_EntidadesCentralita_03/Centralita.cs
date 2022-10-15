@@ -16,7 +16,7 @@ namespace C9_EntidadesCentralita_03
         #region Constructores
         public Centralita()
         {
-            listaDeLlamadas = new List<Llamada>();
+            this.listaDeLlamadas = new List<Llamada>();
         }
 
         public Centralita(string nombreEmpresa) : this()
