@@ -75,40 +75,66 @@ namespace C11_Entidades_01
         //    return resultado;
         //}
 
-        public static int Add(string numeros)
-        {
-            int resultado = 0;
-            string posibleNumero = "";
-            numeros = numeros.Replace(" ", string.Empty);
-            
-            if (!String.IsNullOrEmpty(numeros))
-            {
-                for (int i = 0; i < numeros.Length; i++)
-                {
-                    if (!numeros[i].Equals(',') && !numeros[i].Equals('\n')) posibleNumero += numeros[i];
-                    if (numeros[i].Equals(',') && i != numeros.Length -1 && numeros[i+1].Equals('\n')) throw new FormatException();
+        //Tercera parte
+        //public static int Add(string numeros)
+        //{
+        //    int resultado = 0;
+        //    string posibleNumero = "";
+        //    numeros = numeros.Replace(" ", string.Empty);
 
-                    if (i == numeros.Length - 1 || (numeros[i].Equals(',') && !numeros[i+1].Equals('\n')) || (numeros[i].Equals('\n') && !numeros[i+1].Equals(',')))
-                    {
-                        try
-                        {
-                            if (posibleNumero.Contains('\n')) posibleNumero = posibleNumero.Replace("\n", String.Empty);
-                            resultado += int.Parse(posibleNumero);
-                            posibleNumero = "";
-                        }
-                        catch (FormatException ex)
-                        {
-                            throw new FormatException(ex.Message);
-                        }
-                        catch (Exception ex)
-                        {
-                            throw new Exception(ex.Message);
-                        }
-                    }
-                }
-            }
+        //    if (!String.IsNullOrEmpty(numeros))
+        //    {
+        //        for (int i = 0; i < numeros.Length; i++)
+        //        {
+        //            if (!numeros[i].Equals(',') && !numeros[i].Equals('\n')) posibleNumero += numeros[i];
+        //            if (numeros[i].Equals(',') && i != numeros.Length -1 && numeros[i+1].Equals('\n')) throw new FormatException();
 
-            return resultado;
-        }
+        //            if (i == numeros.Length - 1 || (numeros[i].Equals(',') && !numeros[i+1].Equals('\n')) || (numeros[i].Equals('\n') && !numeros[i+1].Equals(',')))
+        //            {
+        //                try
+        //                {
+        //                    if (posibleNumero.Contains('\n')) posibleNumero = posibleNumero.Replace("\n", String.Empty);
+        //                    resultado += int.Parse(posibleNumero);
+        //                    posibleNumero = "";
+        //                }
+        //                catch (FormatException ex)
+        //                {
+        //                    throw new FormatException(ex.Message);
+        //                }
+        //                catch (Exception ex)
+        //                {
+        //                    throw new Exception(ex.Message);
+        //                }
+        //            }
+        //        }
+        //    }
+
+        //    return resultado;
+        //}
+
+        //public static int Add(string numeros)
+        //{
+
+        //}
     }
 }
+
+
+//if (i == numeros.Length - 1 ||
+//   (posibleNumero.Length > 0 && ((numeros[i].Equals(delimitador) && !numeros[i + 1].Equals('\n')) || (numeros[i].Equals('\n') && !numeros[i + 1].Equals(delimitador)))))
+//{
+//    try
+//    {
+//        if (posibleNumero.Contains('\n')) posibleNumero = posibleNumero.Replace("\n", String.Empty);
+//        resultado += int.Parse(posibleNumero);
+//        posibleNumero = "";
+//    }
+//    catch (FormatException ex)
+//    {
+//        throw new FormatException(ex.Message);
+//    }
+//    catch (Exception ex)
+//    {
+//        throw new Exception(ex.Message);
+//    }
+//}

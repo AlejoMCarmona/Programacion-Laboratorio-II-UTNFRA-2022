@@ -47,7 +47,19 @@ namespace C11_Ejercicio_01
                 resultado = Calculadora.Add("1 \n2,3");
                 Console.WriteLine($"Resultado: {resultado}");
 
-                resultado = Calculadora.Add("1 \n2");
+                resultado = Calculadora.Add("1 \n2"); ////; \ n1; 2
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("//; \n1; 2");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("//a \n1a 2a9");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("//a \n1a 2a9");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,,2"); //excepcion
                 Console.WriteLine($"Resultado: {resultado}");
 
                 resultado = Calculadora.Add("1, \n"); //excepcion
