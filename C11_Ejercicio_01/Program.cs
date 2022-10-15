@@ -20,6 +20,24 @@ namespace C11_Ejercicio_01
                 resultado = Calculadora.Add("1,2");
                 Console.WriteLine($"Resultado: {resultado}");
 
+                resultado = Calculadora.Add("1,2,3,4");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,2,3");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,023,3");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,023,31,29,4,7,9,4,2,5");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,6,");
+                Console.WriteLine($"Resultado: {resultado}");
+
+                resultado = Calculadora.Add("1,6, "); //excepción
+                Console.WriteLine($"Resultado: {resultado}");
+
                 resultado = Calculadora.Add("1, hola"); //excepción
                 Console.WriteLine($"Resultado: {resultado}");
             }
