@@ -16,7 +16,7 @@ namespace C13_Entidades_01
         ConsoleColor IAcciones.Color
         {
             get { return ConsoleColor.Gray; }
-            set { throw new NotImplementedException(); }
+            set { throw new NotImplementedException("Los lápices siempre son de color gris."); }
         }
 
         float IAcciones.UnidadesDeEscritura
@@ -27,14 +27,14 @@ namespace C13_Entidades_01
 
         EscrituraWrapper IAcciones.Escribir(string texto)
         {
-            if (String.IsNullOrEmpty(texto)) throw new CadenaVaciaException("");
+            if (String.IsNullOrEmpty(texto)) throw new CadenaVaciaException("No puede recargarse un lápiz común.");
 
             foreach (char caracter in texto)
             {
                 if (!Char.IsWhiteSpace(caracter))
                 {
                     this.tamanioMina -= 0.1f;
-                    if (this.tamanioMina <= 0.1) throw new CantidadInsuficienteException("El tamaño actual de mina no es suficiente para escribir.");
+                    if (this.tamanioMina < 0.1) throw new CantidadInsuficienteException("El tamaño actual de mina no es suficiente para escribir.");
                 }
             }
 

@@ -24,9 +24,14 @@ namespace C13_Entidades_01
         public float UnidadesDeEscritura 
         {
             get { return this.tinta; } 
-            set { this.Recargar((int)value); } 
+            set 
+            {
+                if (value < 0) 
+                    throw new Exception("No se puede asignar un numero negativo como unidad de escritura.");
+                this.tinta = value; 
+            } 
         }
-
+         
         public EscrituraWrapper Escribir(string texto)
         {
             if (String.IsNullOrEmpty(texto)) throw new CadenaVaciaException();
@@ -36,7 +41,7 @@ namespace C13_Entidades_01
                 if (!Char.IsWhiteSpace(caracter))
                 {
                     this.tinta -= 0.3f;
-                    if (this.tinta <= 0.3) throw new CantidadInsuficienteException("La cantidad de tinta disponible no es suficiente para escribir.");
+                    if (this.tinta < 0.3) throw new CantidadInsuficienteException("La cantidad de tinta disponible no es suficiente para escribir.");
                 }
             }
 
