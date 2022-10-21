@@ -62,7 +62,7 @@ namespace C13_Entidades_01
 
             datos.Append("Es un boligrafo");
             datos.Append($" de color {this.colorTinta}");
-            datos.Append($" y con un nivel de tinta de {Math.Round(this.tinta)}");
+            datos.Append($" y con un nivel de tinta de {this.tinta}");
 
             return datos.ToString();
         }

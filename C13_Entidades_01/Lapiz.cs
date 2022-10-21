@@ -13,19 +13,19 @@ namespace C13_Entidades_01
             this.tamanioMina = unidades;
         }
 
-        public ConsoleColor Color
+        ConsoleColor IAcciones.Color
         {
             get { return ConsoleColor.Gray; }
             set { throw new NotImplementedException(); }
         }
 
-        public float UnidadesDeEscritura
+        float IAcciones.UnidadesDeEscritura
         {
             get { return this.tamanioMina; }
-            set { this.Recargar((int)value); }
+            set { throw new NotImplementedException(); }
         }
 
-        public EscrituraWrapper Escribir(string texto)
+        EscrituraWrapper IAcciones.Escribir(string texto)
         {
             if (String.IsNullOrEmpty(texto)) throw new CadenaVaciaException("");
 
@@ -41,7 +41,7 @@ namespace C13_Entidades_01
             return new EscrituraWrapper(texto, ConsoleColor.Gray);
         }
 
-        public bool Recargar(int unidades)
+        bool IAcciones.Recargar(int unidades)
         {
             throw new NotImplementedException();
         }
@@ -52,7 +52,7 @@ namespace C13_Entidades_01
 
             datos.Append("Es un lápiz");
             datos.Append($" de color {ConsoleColor.Gray}");
-            datos.Append($" y con un tamaño de mina de {Math.Round(this.tamanioMina, 2)}");
+            datos.Append($" y con un tamaño de mina de {this.tamanioMina}");
 
             return datos.ToString();
         }

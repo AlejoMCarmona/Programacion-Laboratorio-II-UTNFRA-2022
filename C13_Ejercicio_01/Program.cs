@@ -12,13 +12,13 @@ namespace C13_Ejercicio_01
             Lapiz miLapiz = new Lapiz(10);
             Boligrafo miBoligrafo = new Boligrafo(20, ConsoleColor.Green);
 
-            EscrituraWrapper eLapiz = miLapiz.Escribir("Hola");
+            EscrituraWrapper eLapiz = ((IAcciones)miLapiz).Escribir("Hola, qué tal?");
             Console.ForegroundColor = eLapiz.color;
             Console.WriteLine(eLapiz.texto);
             Console.ForegroundColor = colorOriginal;
             Console.WriteLine(miLapiz);
 
-            EscrituraWrapper eBoligrafo = miBoligrafo.Escribir("Hola");
+            EscrituraWrapper eBoligrafo = miBoligrafo.Escribir("Hola, cómo estás?");
             Console.ForegroundColor = eBoligrafo.color;
             Console.WriteLine(eBoligrafo.texto);
             Console.ForegroundColor = colorOriginal;
