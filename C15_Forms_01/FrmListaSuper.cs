@@ -31,7 +31,7 @@ namespace C15_Forms_01
 
             try
             {
-                this.listaSupermercado = Serializador<List<string>>.DeserializarXML($"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\listaSupermercado.xml");
+                this.listaSupermercado = Serializador<List<string>>.DeserializarXML($"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}{Path.DirectorySeparatorChar}listaSupermercado.xml");
             }
             catch (Exception ex)
             {
@@ -89,7 +89,7 @@ namespace C15_Forms_01
         {
             try
             {
-                Serializador<List<string>>.SerializarXML(this.listaSupermercado, $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\\listaSupermercado.xml");
+                Serializador<List<string>>.SerializarXML(this.listaSupermercado, $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}{Path.DirectorySeparatorChar}listaSupermercado.xml");
             }
             catch (Exception ex)
             {

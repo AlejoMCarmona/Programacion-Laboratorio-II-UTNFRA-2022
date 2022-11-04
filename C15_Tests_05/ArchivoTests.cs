@@ -11,7 +11,7 @@ namespace C15_Tests_05
         {
             PuntoJSON<string> json = new PuntoJSON<string>();
             PuntoXML<string> xml = new PuntoXML<string>();
-            PuntoTXT<string> txt = new PuntoTXT<string>();
+            PuntoTXT txt = new PuntoTXT();
 
             Assert.IsTrue(json.ValidarExtension("serializado.json"));
             Assert.IsTrue(xml.ValidarExtension("serializado.xml"));
@@ -38,7 +38,7 @@ namespace C15_Tests_05
         [ExpectedException(typeof(ArchivoIncorrectoException))]
         public void ArchivoTXTExtension_NoDebeSerCorrecta()
         {
-            PuntoTXT<string> txt = new PuntoTXT<string>();
+            PuntoTXT txt = new PuntoTXT();
             Assert.IsFalse(txt.ValidarExtension("serializado.xml"));
         }
     }
