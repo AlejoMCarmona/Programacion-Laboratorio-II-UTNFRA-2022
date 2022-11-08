@@ -26,8 +26,10 @@ namespace C17_Entidades_02
         #endregion
 
         #region  Métodos
-        public static void Eliminar(int codigoJuego)
+        public static bool Eliminar(int codigoJuego)
         {
+            bool resultado = false;
+
             try
             {
                 command.CommandText = "DELETE FROM Juegos WHERE CODIGO_JUEGO = @codigoJuego";
@@ -36,7 +38,7 @@ namespace C17_Entidades_02
                 
                 if (command.ExecuteNonQuery() > 0)
                 {
-                    Console.WriteLine("Juego eliminado con éxito");
+                    resultado = true;
                 }
             }
             catch (Exception ex)
@@ -49,10 +51,14 @@ namespace C17_Entidades_02
                 command.Parameters.Clear();
                 command.CommandText = "";
             }
+
+            return resultado;
         }
 
-        public static void Guardar(Juego juego)
+        public static bool Guardar(Juego juego)
         {
+            bool resultado = false;
+
             try
             {
                 command.CommandText = "INSERT INTO Juegos VALUES (@codigoUsuario, @nombre, @precio, @genero)";
@@ -65,7 +71,7 @@ namespace C17_Entidades_02
 
                 if (command.ExecuteNonQuery() > 0)
                 {
-                    Console.WriteLine("Juego guardado con éxito");
+                    resultado = true;
                 }
             }
             catch (Exception ex)
@@ -78,6 +84,8 @@ namespace C17_Entidades_02
                 command.Parameters.Clear();
                 command.CommandText = "";
             }
+
+            return resultado;
         }
 
         public static List<Biblioteca> Leer()
@@ -150,8 +158,10 @@ namespace C17_Entidades_02
             return juego;
         }
 
-        public static void Modificar(Juego juego)
+        public static bool Modificar(Juego juego)
         {
+            bool resultado = false;
+
             try
             {
                 command.CommandText = "UPDATE JUEGOS SET PRECIO = @precio, NOMBRE = @nombre, GENERO = @genero WHERE CODIGO_JUEGO = @codigo_juego";
@@ -164,7 +174,7 @@ namespace C17_Entidades_02
 
                 if (command.ExecuteNonQuery() > 0)
                 {
-                    Console.WriteLine("Modificado con éxito");
+                    resultado = true;
                 }
             }
             catch (Exception ex)
@@ -177,6 +187,8 @@ namespace C17_Entidades_02
                 command.Parameters.Clear();
                 command.CommandText = "";
             }
+
+            return resultado;
         }
         #endregion
     }

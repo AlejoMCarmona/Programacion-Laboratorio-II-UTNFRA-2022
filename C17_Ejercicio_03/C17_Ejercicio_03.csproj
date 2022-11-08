@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\C17_Entidades_02\C17_Entidades_02.csproj" />
+  </ItemGroup>
+
 </Project>
